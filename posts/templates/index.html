@@ -1,9 +1,22 @@
 {% extends 'base.html' %}
+{% load static %}
 
-{% block title%}
+{% block title %}
 	About
 {% endblock %}
 
 {% block content%}
-	<h5>Index content</h1>
+	<main>
+		<div>
+			<img class="gif" src="{% static 'media/tux-linux.gif'%}" alt="">
+		</div>
+		<div>
+			<p>Social</p>
+			<ul>
+				<li><a href="https://x.com/Alvesafk" target="_blank">Alvesafk</a></li>
+				<li><a href="https://github.com/Alvesafk" target="_blank">Alvesafk</a></li>
+				<li><a href="mailto:migueldealmeidaalves55@gmail.com">migueldealmeidaalves55@gmail.com</a></li>
+			</ul>	
+		</div>
+	</main>		
 {% endblock %}
