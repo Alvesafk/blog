@@ -1,20 +1,9 @@
-{% load markdown %}
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Alves's Blog</title>
-	</head>
-	<body>
-		<h1>Hello, world!</h1>
-		<div>
-			{% for post in all_posts %}
-			<div class="post" id="{{ post.id }}" style="border: 1px solid black; margin: 10px;">
-				<h2>{{ post.title }}</h2>
-				<p>{{ post.preview | markdown }}</p>
-			</div>
-			{% endfor %}
-		</div>
-	</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title%}
+	About
+{% endblock %}
+
+{% block content%}
+	<h5>Index content</h1>
+{% endblock %}
