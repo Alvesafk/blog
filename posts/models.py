@@ -11,7 +11,7 @@ class Post(models.Model):
     title = models.CharField(max_length=256)
     content = models.TextField()
     tags = models.ManyToManyField(Tag, blank=True)
-    author = models.OneToOneField(User, on_delete=models.PROTECT)
+    author = models.ForeignKey(User, on_delete=models.PROTECT, default=1)
     publish_date = models.DateTimeField(blank=True, null=True)
 
     def __str__(self):
