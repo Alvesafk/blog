@@ -1,0 +1,5 @@
+{% load markdown %}
+<h1>{{ post.title }}</h1>
+<p>{{ post.content | markdown }}</p>
+<p><small>{{ post.tags }}</small></p>
+<p>{{ post.author }}</p>

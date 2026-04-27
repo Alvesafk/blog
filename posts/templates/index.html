@@ -11,10 +11,9 @@
 		<div>
 			{% for post in all_posts %}
 			<div class="post" id="{{ post.id }}" style="border: 1px solid black; margin: 10px;">
-					<h2>{{ post.title }}</h2>
-					{{ post.content | markdown }}
-					<p>{{ post.author }}</p>
-				</div>
+				<h2>{{ post.title }}</h2>
+				<p>{{ post.preview | markdown }}</p>
+			</div>
 			{% endfor %}
 		</div>
 	</body>

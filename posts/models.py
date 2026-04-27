@@ -14,5 +14,9 @@ class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.PROTECT, default=1)
     publish_date = models.DateTimeField(blank=True, null=True)
 
+    @property
+    def preview(self):
+        return self.content[:256] + "..."
+
     def __str__(self):
         return f"{self.title}, {self.tags}, {self.publish_date}"
