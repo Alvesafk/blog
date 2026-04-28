@@ -8,17 +8,23 @@
 
 {% block content%}
 	<main>
-		{% for post in all_posts %}
-		<div class="card" data-post-id="{{ post.id }}"> 
-			<h2>{{ post.title }}</h2>
-			{% if post.preview %}
-				<p><span>{{ post.preview }}</span></p>
-			{% else %}
-				<p><span>{{ post.auto_preview | markdown }}</span></p>
-			{% endif %}
-			<p>{{ post.publish_date }}</p>
-			<p><small>{{ post.tags_string }}</small></p>
+		<div id="container-posts">
+			{% for post in all_posts %}
+			<div class="card clickable-post" data-post-id="{{ post.id }}" data-url="{% url 'details' post.id %}">
+				<h2>{{ post.title }}</h2>
+				{% if post.preview %}
+					<p><span>{{ post.preview }}</span></p>
+				{% else %}
+					<p><span>{{ post.auto_preview | markdown }}</span></p>
+				{% endif %}
+				<p>{{ post.publish_date }}</p>
+				<p><small>{{ post.tags_string }}</small></p>
+			</div>
+			{% endfor %}
 		</div>
-		{% endfor %}
 	</main>
+{% endblock %}
+
+{% block scripts %}
+	<script src="{% static 'js/posts.js'%}"></script>
 {% endblock %}

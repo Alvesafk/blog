@@ -9,8 +9,8 @@
 		<header>
 			<h1>Alves's Blog</h1>
 			<nav>
-				<a href="javascript:void()">About</a>
-				<a href="javascript:void()">Posts</a>
+				<a id="about-link" href="/">About</a>
+				<a id="posts-link" href="/posts/">Posts</a>
 			</nav>
 		</header>
 		{% block content %}
@@ -23,5 +23,7 @@
 				<!-- STATS -->
 			</div>
 		</footer>		
+		{% block scripts %}
+		{% endblock %}
 	</body>
 </html>
