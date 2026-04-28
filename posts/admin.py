@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import Post, Tag
 
 class PostAdmin(admin.ModelAdmin):
-    list_display = ("id", "title", "content", "publish_date")
+    list_display = ("id", "title", "tags_string", "publish_date")
 
 class TagAdmin(admin.ModelAdmin):
     list_display = ("id", "name")

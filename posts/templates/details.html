@@ -1,5 +1,27 @@
+{% extends 'base.html' %}
+{% load static%}
 {% load markdown %}
-<h1>{{ post.title }}</h1>
-<p>{{ post.content | markdown }}</p>
-<p><small>{{ post.tags }}</small></p>
-<p>{{ post.author }}</p>
+
+{% block title%}
+	{{ post.title }}
+{% endblock %}
+
+{% block content %}
+	<main>
+		<div id="return">
+			<button id="return-btn" type="button">Return</button>
+		</div>
+		<div id="post-container">
+			<div id="post-header">
+				<h2>{{ post.title }}</h1>
+			</div>
+			<div id="post-content">
+				<p>{{ post.content | markdown }}</p>
+			</div>
+			<div id="post-footer">
+				<p><small>{{ post.tags_string | default:"No tags!" }}</small></p>
+				<p>Published at {{ post.publish_date }}</p>
+			</div>
+		</div>
+	</main>
+{% endblock %}
