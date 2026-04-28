@@ -8,31 +8,38 @@
 
 {% block css_files %}
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<link rel="stylesheet" href="{% static 'css/index.css' %}">
 {% endblock %}
 
 {% block content%}
 	<main>
-		<div id="tux">
-			<img class="gif" src="{% static 'media/tux-linux.gif'%}" alt="">
+		<div class="content" id="index-img">
+			<div id="tux">
+				<img class="gif" src="{% static 'media/tux-linux.gif'%}" alt="">
+			</div>
 		</div>
-		<div class="content">
+		<div class="content" id="other-stuff">
 			<div id="social-content">
-				<p>Social</p>
-				<ul>
-					<li><i class="fa-brands fa-twitter"></i><a href="https://x.com/Alvesafk" target="_blank">Alvesafk</a></li>
-					<li><i class="fa-brands fa-github"></i><a href="https://github.com/Alvesafk" target="_blank">Alvesafk</a></li>
-					<li><i class="fa-solid fa-envelope"></i><a href="mailto:migueldealmeidaalves55@gmail.com">migueldealmeidaalves55@gmail.com</a></li>
+				<h2 class="title" id="social-title" >Social</h2>
+				<ul id="social-list">
+					<li><i class="fa-brands fa-twitter"></i> <a class ="social-link" href="https://x.com/Alvesafk" target="_blank">Alvesafk</a></li>
+					<li><i class="fa-brands fa-github"></i> <a class ="social-link" href="https://github.com/Alvesafk" target="_blank">Alvesafk</a></li>
+					<li><i class="fa-solid fa-envelope"></i> <a class ="social-link" href="mailto:migueldealmeidaalves55@gmail.com">migueldealmeidaalves55@gmail.com</a></li>
+					<li><i class="fa-solid fa-file"></i><a class ="social-link" href="#"> Curriculum</a></li>
 				</ul>	
 			</div>
 			<div id="most_recent_post">
-				<h2>{{ most_recent_post.title }}</h2>
-				{% if most_recent_post.preview %}
-					<p><span>{{ most_recent_post.preview }}</span></p>
-				{% else %}
-					<p><span>{{ most_recent_post.auto_preview | markdown }}</span></p>
-				{% endif %}
-				<p>{{ most_recent_post.publish_date }}</p>
-				<p><small>{{ most_recent_post.tags_string }}</small></p>
+				<h2 class="title">Most recent post!</h2>
+				<div class="post" data-id="{{ most_recent_post.id }}">
+					<h3 class="post-title">{{ most_recent_post.title }}</h2>
+					{% if most_recent_post.preview %}
+						<p class="post-preview"><span>{{ most_recent_post.preview }}</span></p>
+					{% else %}
+						<p class="post-preview"><span>{{ most_recent_post.auto_preview | markdown }}</span></p>
+					{% endif %}
+					<p class="post-date">{{ most_recent_post.publish_date }}</p>
+					<p class="post-tags"><small>{{ most_recent_post.tags_string }}</small></p>
+				</div>
 			</div>
 		</div>
 	</main>		

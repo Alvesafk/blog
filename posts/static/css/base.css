@@ -26,6 +26,7 @@ body {
 h1 {
 	font-family: Fascinate, Arial, Helvetica, sans-serif;
 	font-size: 3.75rem;
+	text-decoration: underline;
 }
 
 .beep {

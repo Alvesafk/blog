@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=TASA+Explorer:wght@400..800&display=swap');
+
+.content {
+	display: flex;
+	justify-content: space-between;
+	aligin-items: center;
+	margin: 0 16rem 2rem 16rem;
+}
+
+.title {
+	font-family: "TASA Explorer", Arial, Helvetica, sans-serif;
+	font-weigth: bold;
+	text-decoration: underline;
+	margin-bottom: .5rem;
+}
+
+#index-img {
+	justify-content: center;	
+	margin-bottom: 5rem;
+}
+
+#tux {
+	border-radius: 32px;
+	overflow: hidden;
+	box-shadow: 0rem 0rem 3rem #00000015;
+}
+
+#other-stuff {
+	justify-content: space-around;
+	margin: 2rem 6rem;
+}
+
+ul {
+	list-style: inside;
+}
+
+li {
+	margin-bottom: .25rem;
+}
+
+.social-link {
+	font-family: "TASA Explorer", Arial, Helvetica, sans-serif;
+	transition: ease-in 0.2s;
+	color: #3a405c; 
+	text-decoration: none;
+}
+
+.social-link:hover {
+	color: #5a607c
+}
+
+.post-title, .post-preview > span, .post-tags > small, .post-tags, .post-date {
+	font-family: "TASA Explorer", Arial, Helvetica, sans-serif;
+}
+
+.post-title {
+	margin-bottom: .4rem;
+	font-size: 1.3rem;
+}
+
+.post-preview, .post-date {
+	margin-bottom: .3rem;
+}
+
+.post-date {
+	font-size: .8rem;
+}
+
+.post-tags > small {
+	color: #f1f1f1;
+	background-color: #6a707c;
+	padding: 3px;
+	border-radius: 4px;
+}
