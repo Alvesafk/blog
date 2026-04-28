@@ -5,7 +5,7 @@ def index(request):
     return render(request, 'index.html')
 
 def posts(request):
-    all_posts = Post.objects.all()
+    all_posts = Post.objects.order_by("-publish_date").all()
 
     context = {
             "all_posts": all_posts,   
