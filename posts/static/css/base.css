@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=TASA+Explorer:wght@400..800&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	color: #1a202c;
+	background-color: #F2F2F2;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	margin: 0;
+}
+
+#header-content {
+	display: flex;
+	justify-content: space-between;
+	aligin-items: center;
+	margin: 4rem 10rem;
+}
+
+h1 {
+	font-family: Fascinate, Arial, Helvetica, sans-serif;
+	font-size: 3.75rem;
+}
+
+.beep {
+	font-family: "TASA Explorer", Arial, Helvetica, sans-serif;
+	color: #3a404c;
+	font-size: 1rem;
+	font-weight: normal;
+}
+
+nav {
+	margin-top: 2.2rem;
+}
+
+a {
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+#about-link {
+	margin-right: 1rem;
+}
+
+.is-disabled {
+	pointer-events: none;
+	color: #6a707c;
+}
+
+main {
+	flex-grow: 1;
+}
+
+footer {
+	text-align: center;
+	padding: 10px;
+}
+
+#footer-content {
+	display: flex;
+	justify-content: space-between;
+	aligin-items: center;
+}
+
+#footer-content > div {
+	margin: 1rem 10rem;
+}
+
+#footer-content span, #footer-content p {
+	color: #1a202c;
+	font-family: "TASA Explorer", Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 1.25rem;
+}
+
+

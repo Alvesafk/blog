@@ -14,7 +14,7 @@ class StatsMiddleware:
         if response.get('Content-Type', '').startswith('text/html'):
             stats_html = (
                 f'<span class="stats">'
-                f'<p>'
+                f'<p class="footer-text">'
                 f'Page loaded in {total_time:.2f} seconds'
                 f'</p>'
                 f'</span>'

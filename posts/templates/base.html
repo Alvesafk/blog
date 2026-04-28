@@ -1,26 +1,35 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Alves's Blog - {% block title %}{% endblock %}</title>
+		<link rel="stylesheet" href="{% static 'css/base.css'%}">
+		<link rel="shortcut icon" type="image/x-icon" href="{% static 'media/favicon.ico' %}">
+		{% block css_files %}
+		{% endblock %}
 	</head>
 	<body>
 		<header>
-			<h1>Alves's Blog</h1>
-			<nav>
-				<a id="about-link" href="/">About</a>
-				<a id="posts-link" href="/posts/">Posts</a>
-			</nav>
+			<div id="header-content">
+				<h1>Alves's Blog <small class="beep">beep...</small></h1>
+				<nav>
+					<a id="about-link" href="/">About</a>
+					<a id="posts-link" href="/posts/">Posts</a>
+				</nav>
+			</div>
 		</header>
 		{% block content %}
 		{% endblock %}
 		<footer>
-			<div class="content">
-				<p><span>beep... beep... alvesafk @ 2026</span></p>
-			</div>
-			<div class="footer-stats">
-				<!-- STATS -->
+			<div id="footer-content">
+				<div class="content">
+					<p class="footer-text"><span><small class="beep">beep... beep... </small>alvesafk @ 2026</span></p>
+				</div>
+				<div class="footer-stats">
+					<!-- STATS -->
+				</div>
 			</div>
 		</footer>		
 		{% block scripts %}
