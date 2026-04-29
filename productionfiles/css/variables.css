@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=TASA+Explorer:wght@400..800&display=swap');
+
+:root {
+	--bg-color: #f2f2f2;
+	--fg-color: #1a202c;
+	--fg-hover: #5a607c;
+	--fg-link: #3b415d;
+	--fg-subtle: #6a707c;
+	--beep-color: #3a404c;
+
+	--normal-font: "TASA Explorer", Arial, Helvetica, sans-serif;
+	--title-font: Fascinate, Arial, Helvetica, sans-serif;
+}
+
+[dark-theme="dark"] {
+	--bg-color: #2f2f2f;
+	--fg-color: #a102c2;
+	--fg-hover: #5a607c;
+	--fg-link: #3b415d;
+	--fg-subtle: #a607c7;
+	--beep-color: #a304c4;
+}
