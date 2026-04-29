@@ -13,8 +13,8 @@
 	--title-font: Fascinate, Arial, Helvetica, sans-serif;
 }
 
-[dark-theme="dark"] {
-	--bg-color: #2f2f2f;
+[data-theme="dark"] {
+	--bg-color: #000;
 	--fg-color: #a102c2;
 	--fg-hover: #5a607c;
 	--fg-link: #3b415d;

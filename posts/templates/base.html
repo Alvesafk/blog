@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="{{ request.COOKIES.theme|default:'auto' }}">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,8 +8,18 @@
 		<link rel="shortcut icon" type="image/x-icon" href="{% static 'media/favicon.ico' %}">
 		<link rel="stylesheet" href="{% static 'css/variables.css' %}">
 		<link rel="stylesheet" href="{% static 'css/base.css'%}">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 		{% block css_files %}
 		{% endblock %}
+
+		<script>
+        const themeCookie = "{{ request.COOKIES.theme }}";
+        if (!themeCookie) {
+			const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+            document.documentElement.setAttribute("data-theme", prefersDark ? "dark" : "light");
+        }
+    </script>
 	</head>
 	<body>
 		<header>
@@ -18,7 +28,7 @@
 				<nav>
 					<a id="about-link" href="/">About</a>
 					<a id="posts-link" href="/posts/">Posts</a>
-					<span id="theme-icon"><i class="fa-solid fa-sun"></i></span>
+					<span id="theme-icon-div"><i id="theme-icon" class="fa-solid fa-sun"></i></span>
 				</nav>
 			</div>
 		</header>
@@ -36,6 +46,7 @@
 		</footer>		
 		{% block scripts %}
 		{% endblock %}
-		<script src="{% static 'js/base.js'%}"></script>
+		<script src="{% static 'js/base.js' %}"></script>
+		<script src="{% static 'js/theme_switcher.js' %}"></script>
 	</body>
 </html>
