@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=TASA+Explorer:wght@400..800&display=swap');
+
+#post-container {
+	display: flex;
+	flex-direction: column;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+#post-container > * > * {
+	font-family: "TASA Explorer";
+}
+
+#post-header {
+	display: flex;
+	justify-content: space-between;
+	aligin-items: center;
+	border-bottom: 1px solid #1a202c;
+	margin-bottom: .75rem;
+}
+
+#post-header > * {
+	font-size: 3rem;
+}
+
+#post-header > a {
+	font-size: 1rem;
+	text-decoration: none;
+}
+
+#post-content > * {
+	font-size: 1.25rem;
+	margin-bottom: .5rem;
+}
+
+#post-footer > p {
+	margin: .5rem 0;
+}
+
+#post-footer > p > small {
+	color: #f1f1f1;
+	background-color: #6a707c;
+	padding: 3px;
+	border-radius: 4px;
+}
