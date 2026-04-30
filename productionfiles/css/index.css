@@ -51,6 +51,10 @@ li {
 	font-family: var(--normal-font);
 }
 
+#recent-post {
+	cursor: pointer;
+}
+
 .post-title {
 	margin-bottom: .4rem;
 	font-size: 1.3rem;

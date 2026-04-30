@@ -13,11 +13,11 @@
 	--title-font: Fascinate, Arial, Helvetica, sans-serif;
 }
 
-[dark-theme="dark"] {
-	--bg-color: #2f2f2f;
-	--fg-color: #a102c2;
-	--fg-hover: #5a607c;
-	--fg-link: #3b415d;
-	--fg-subtle: #a607c7;
-	--beep-color: #a304c4;
+[data-theme="dark"] {
+	--bg-color: #202020;
+	--fg-color: #c5bab0;
+	--fg-hover: #e6dbd0;
+	--fg-link: #a59a90;
+	--fg-subtle: #a6fda6;
+	--beep-color: #a6fda6;
 }

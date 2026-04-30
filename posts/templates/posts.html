@@ -13,20 +13,24 @@
 {% block content%}
 	<main>
 		<div id="container-posts">
-			{% for post in all_posts %}
-			<div class="card clickable-post" data-post-id="{{ post.id }}" data-url="{% url 'details' post.id %}">
-				<h2 class="post-title">{{ post.title }}</h2>
-				{% if post.preview %}
-					<p><span class="post-preview">{{ post.preview }}</span></p>
-				{% else %}
-					<div class="post-preview">
-						<p><span class="post-preview">{{ post.auto_preview | markdown }}</span></p>
-					</div>
-				{% endif %}
-				<p class="post-date">{{ post.publish_date }}</p>
-				<p><small class="post-tags">{{ post.tags_string }}</small></p>
-			</div>
-			{% endfor %}
+			{% if all_posts %}
+				{% for post in all_posts %}
+				<div class="card clickable-post" data-post-id="{{ post.id }}" data-url="{% url 'details' post.id %}">
+					<h2 class="post-title">{{ post.title }}</h2>
+					{% if post.preview %}
+						<p><span class="post-preview">{{ post.preview }}</span></p>
+					{% else %}
+						<div class="post-preview">
+							<p><span class="post-preview">{{ post.auto_preview | markdown }}</span></p>
+						</div>
+					{% endif %}
+					<p class="post-date">{{ post.publish_date }}</p>
+					<p><small class="post-tags">{{ post.tags_string }}</small></p>
+				</div>
+				{% endfor %}
+			{% else %}
+				<h2>Oops... no posts yet!</h2>
+			{% endif %}
 		</div>
 	</main>
 {% endblock %}

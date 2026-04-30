@@ -24,11 +24,12 @@
 					<li><i class="fa-brands fa-twitter"></i> <a class ="social-link" href="https://x.com/Alvesafk" target="_blank">Alvesafk</a></li>
 					<li><i class="fa-brands fa-github"></i> <a class ="social-link" href="https://github.com/Alvesafk" target="_blank">Alvesafk</a></li>
 					<li><i class="fa-solid fa-envelope"></i> <a class ="social-link" href="mailto:migueldealmeidaalves55@gmail.com">migueldealmeidaalves55@gmail.com</a></li>
-					<li><i class="fa-solid fa-file"></i><a class ="social-link" href="#"> Curriculum</a></li>
+					<li><i class="fa-solid fa-file"></i><a class ="social-link" href="{% static 'curriculo_miguel_alves.pdf' %}" target="_blank"> Curriculum</a></li>
 				</ul>	
 			</div>
 			<div id="most_recent_post">
 				<h2 class="title">Most recent post!</h2>
+				{% if most_recent_post %}
 				<div id="recent-post" class="post" data-id="{{ most_recent_post.id }}">
 					<h3 class="post-title">{{ most_recent_post.title }}</h2>
 					{% if most_recent_post.preview %}
@@ -39,6 +40,9 @@
 					<p class="post-date">{{ most_recent_post.publish_date }}</p>
 					<p class="post-tags"><small>{{ most_recent_post.tags_string }}</small></p>
 				</div>
+				{% else %}
+					<p class="post-preview">Oops... no posts yet!</p>
+				{% endif %}
 			</div>
 		</div>
 	</main>		
