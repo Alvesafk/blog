@@ -1,13 +1,13 @@
 .content {
 	display: flex;
 	justify-content: space-between;
-	aligin-items: center;
+	align-items: center;
 	margin: 0 16rem 2rem 16rem;
 }
 
 .title {
 	font-family: var(--normal-font);
-	font-weigth: bold;
+	font-weight: bold;
 	text-decoration: underline;
 	margin-bottom: .5rem;
 }
@@ -62,6 +62,10 @@ li {
 
 .post-preview, .post-date {
 	margin-bottom: .3rem;
+}
+
+.post-preview {
+	max-width: 400px;
 }
 
 .post-date {

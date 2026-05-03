@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
 #post-container {
 	display: flex;
 	flex-direction: column;
@@ -12,7 +14,7 @@
 #post-header {
 	display: flex;
 	justify-content: space-between;
-	aligin-items: center;
+	align-items: center;
 	border-bottom: 1px solid #1a202c;
 	margin-bottom: .75rem;
 }
@@ -35,6 +37,29 @@
 #post-content > * {
 	font-size: 1.25rem;
 	margin-bottom: .5rem;
+}
+
+code {
+	font-family: var(--code-font);
+	background-color: var(--bg-code);
+	color: var(--fg-code);
+	padding: .2rem .4rem;
+	border-radius: 4px;
+	font-size: 1rem;
+}
+
+pre {
+	background-color: var(--bg-code);
+	padding: .75rem;
+	border-radius: 8px;
+	overflow-x: auto;
+}
+
+pre code {
+	background-color: transparent;
+	padding: 0;
+	display: block;
+	line-height: 1.5;
 }
 
 #post-footer > p {

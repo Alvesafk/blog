@@ -24,7 +24,7 @@
 	<body>
 		<header>
 			<div id="header-content">
-				<h1>Alves's Blog <small class="beep">beep...</small></h1>
+				<h1>Alves's Blog <small onclick="beep()" class="beep">beep...</small></h1>
 				<nav>
 					<a id="about-link" href="/">About</a>
 					<a id="posts-link" href="/posts/">Posts</a>
@@ -37,16 +37,31 @@
 		<footer>
 			<div id="footer-content">
 				<div class="content">
-					<p class="footer-text"><span><small class="beep">beep... beep... </small>alvesafk @ 2026</span></p>
+					<p class="footer-text"><span><small onclick="beep()" class="beep">beep... beep... </small>alvesafk @ 2026</span></p>
 				</div>
 				<div class="footer-stats">
 					<p id="time-stat">The page was loaded in 0 seconds!</p>
 				</div>
 			</div>
 		</footer>		
+		<audio id="beep-audio">
+			<source src="{% static 'media/beep.mp3' %}" type="audio/mpeg">
+		</audio>
 		{% block scripts %}
 		{% endblock %}
 		<script src="{% static 'js/base.js' %}"></script>
 		<script src="{% static 'js/theme_switcher.js' %}"></script>
+		<script>
+			function beep() {
+				const audio = document.getElementById('beep-audio');
+
+				audio.volume = 0.3;
+				audio.currentTime = 0;
+
+				audio.play().catch(err => {
+					console.error("Error oh no!! My audio!!", err);
+				});
+			}
+		</script>	
 	</body>
 </html>

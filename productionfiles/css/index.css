@@ -64,6 +64,10 @@ li {
 	margin-bottom: .3rem;
 }
 
+.post-preview {
+	max-width: 400px;
+}
+
 .post-date {
 	font-size: .8rem;
 }
