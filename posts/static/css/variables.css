@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=TASA+Explorer:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
 :root {
 	--bg-color: #f2f2f2;
@@ -8,9 +9,12 @@
 	--fg-link: #3b415d;
 	--fg-subtle: #6a707c;
 	--beep-color: #3a404c;
+	--bg-code: #e2e2e2;
+	--fg-code: #86cd86;
 
 	--normal-font: "TASA Explorer", Arial, Helvetica, sans-serif;
 	--title-font: Fascinate, Arial, Helvetica, sans-serif;
+	--code-font: "JetBrains Mono", monospace;
 }
 
 [data-theme="dark"] {
@@ -20,4 +24,6 @@
 	--fg-link: #a59a90;
 	--fg-subtle: #a6fda6;
 	--beep-color: #a6fda6;
+	--bg-code: #323232;
+	--fg-code: #9ab0cc;
 }
