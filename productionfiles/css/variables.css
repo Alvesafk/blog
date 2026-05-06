@@ -29,3 +29,39 @@
 	--bg-code: #323232;
 	--fg-code: #9ab0cc;
 }
+
+[data-theme="gruvbox"] {
+	--bg-color: #282828;
+	--bg-color-2: #2e2e2e;
+	--fg-color: #ebdbb2;
+	--fg-hover: #fb4934;
+	--fg-link: #83a598;
+	--fg-subtle: #b8bb26;
+	--beep-color: #a89984;
+	--bg-code: #383838;
+	--fg-code: #d79921;
+}
+
+[data-theme="onedark"] {
+	--bg-color: #282c34;
+	--bg-color-2: #383c44;
+	--fg-color: #abb2bf;
+	--fg-hover: #61afef;
+	--fg-link: #56b6c2;
+	--fg-subtle: #e5c07b;
+	--beep-color: #e06c75;
+	--bg-code: #484c54;
+	--fg-code: #98c379;
+}
+
+[data-theme="everforest"] {
+	--bg-color: #333c43;
+	--bg-color-2: #434f55;
+	--fg-color: #d3c6aa;
+	--fg-hover: #63a072;
+	--fg-link: #83c092;
+	--fg-subtle: #d699b6;
+	--beep-color: #a7c080;
+	--bg-code: #555f66;
+	--fg-code: #dbbc7f;
+}
