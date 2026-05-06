@@ -115,11 +115,10 @@ a {
 	color: var(--beep-color) !important; 
 }
 
-.is_disabled-btn {
+.is_disabled_btn {
 	pointer-events: none;
-	color: var(--beep-color);
-	background-color: var(--fg-subtle) !important;
-	opacity: .5;
+	color: var(--bg-color);
+	background-color: var(--fg-color) !important;
 }
 
 main {
