@@ -4,13 +4,14 @@
 
 :root {
 	--bg-color: #f2f2f2;
+	--bg-color-2: #e5e5e5;
 	--fg-color: #1a202c;
 	--fg-hover: #5a607c;
 	--fg-link: #3b415d;
 	--fg-subtle: #6a707c;
 	--beep-color: #3a404c;
 	--bg-code: #e2e2e2;
-	--fg-code: #86cd86;
+	--fg-code: #66ad66;
 
 	--normal-font: "TASA Explorer", Arial, Helvetica, sans-serif;
 	--title-font: Fascinate, Arial, Helvetica, sans-serif;
@@ -19,6 +20,7 @@
 
 [data-theme="dark"] {
 	--bg-color: #202020;
+	--bg-color-2: #2e2e2e;
 	--fg-color: #c5bab0;
 	--fg-hover: #e6dbd0;
 	--fg-link: #a59a90;

@@ -14,12 +14,17 @@
 		{% endblock %}
 
 		<script>
-        const themeCookie = "{{ request.COOKIES.theme }}";
-        if (!themeCookie) {
-			const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-            document.documentElement.setAttribute("data-theme", prefersDark ? "dark" : "light");
-        }
-    </script>
+			const themeCookie = "{{ request.COOKIES.theme }}";
+			if (!themeCookie) {
+				const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+				if(prefersDark) {
+					document.documentElement.setAttribute("data-theme", prefersDark ? "dark" : "light");
+				} 
+
+			} else {
+				document.documentElement.setAttribute("data-theme", themeCookie);
+			}
+		</script>
 	</head>
 	<body>
 		<header>
@@ -28,7 +33,18 @@
 				<nav>
 					<a id="about-link" href="/">About</a>
 					<a id="posts-link" href="/posts/">Posts</a>
-					<span id="theme-icon-div"><i id="theme-icon" class="fa-solid fa-sun"></i></span>
+					<div class="dropdown">
+						<span>Themes</span>	
+						<div class="dropdown-content">
+							<ul class="theme-list">
+								<li class="theme-button" data-theme-name="light"><span><i class="fa-solid fa-sun"></i> Light</span></li>
+								<li class="theme-button" data-theme-name="dark"><span><i class="fa-solid fa-moon"></i> Dark</span></li>
+								<li class="theme-button" data-theme-name="gruvbox"><span><i class="fa-solid fa-floppy-disk"></i> Gruvbox</span></li>
+								<li class="theme-button" data-theme-name="onedark"><span><i class="fa-solid fa-shuttle-space"></i> Onedark</span></li>
+								<li class="theme-button" data-theme-name="everforest"><span><i class="fa-solid fa-tree"></i> Everforest</span></li>
+							</ul>
+						</div>
+					</div>
 				</nav>
 			</div>
 		</header>

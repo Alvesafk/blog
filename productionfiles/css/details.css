@@ -15,7 +15,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	border-bottom: 1px solid #1a202c;
+	border-bottom: 1px solid var(--fg-color);
 	margin-bottom: .75rem;
 }
 
@@ -28,6 +28,7 @@
 	text-decoration: none;
 	transition: ease-in 0.2s;
 	margin-top: 2rem;
+	color: var(--fg-color);
 }
 
 #return-link:hover {
