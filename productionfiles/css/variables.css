@@ -13,6 +13,12 @@
 	--bg-code: #e2e2e2;
 	--fg-code: #66ad66;
 
+	--fg-text: #696969;
+
+	--btn-bg: #5a607c;
+	--btn-fg: var(--bg-color);
+	--btn-hover: #3a405c;
+
 	--normal-font: "TASA Explorer", Arial, Helvetica, sans-serif;
 	--title-font: Fascinate, Arial, Helvetica, sans-serif;
 	--code-font: "JetBrains Mono", monospace;
@@ -28,6 +34,12 @@
 	--beep-color: #a6fda6;
 	--bg-code: #323232;
 	--fg-code: #9ab0cc;
+
+	--fg-text: #a59a90;
+
+	--btn-bg: var(--fg-subtle);
+	--btn-fg: var(--bg-color);
+	--btn-hover: #b7feb7;
 }
 
 [data-theme="gruvbox"] {
@@ -40,6 +52,12 @@
 	--beep-color: #a89984;
 	--bg-code: #383838;
 	--fg-code: #d79921;
+
+	--fg-text: #cbbb92;
+
+	--btn-bg: var(--fg-hover);
+	--btn-fg: var(--fg-color);
+	--btn-hover: #db2914;
 }
 
 [data-theme="onedark"] {
@@ -52,6 +70,12 @@
 	--beep-color: #e06c75;
 	--bg-code: #484c54;
 	--fg-code: #98c379;
+
+	--fg-text: #8b929f;
+
+	--btn-bg: var(--fg-hover);
+	--btn-fg: var(--bg-color);
+	--btn-hover: #418fcf;
 }
 
 [data-theme="everforest"] {
@@ -64,4 +88,10 @@
 	--beep-color: #a7c080;
 	--bg-code: #555f66;
 	--fg-code: #dbbc7f;
+
+	--fg-text: #b3a68a;
+
+	--btn-bg: var(--fg-hover);
+	--btn-fg: var(--bg-color);
+	--btn-hover: #438052;
 }

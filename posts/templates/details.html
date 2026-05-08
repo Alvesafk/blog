@@ -13,7 +13,7 @@
 {% block content %}
 	<main>
 		<div id="post-container">
-			<div id="post-header">
+			<div id="post-header" class="row-line">
 				<h2>{{ post.title }}</h1>
 				<a id="return-link" href="/posts/">Return</a>
 			</div>
@@ -26,21 +26,31 @@
 			</div>
 		</div>
 		<div id="comment-section">
+			<div id="comment-section-header" class="row-line">
+				<h2>Comment section</h2>
+			</div>
 			<div id="comment-form-div">
 				<form id="comment-form" method="POST" action="{% url 'add_comment' post.id %}">
 					{% csrf_token %}
 					<input type="hidden" name="username" value="{% if request.COOKIES.username %}{{ request.COOKIES.username }}{% endif %}">
 					<div id="comment-input-div">
-						<label for="comment-input">Your comment:</label>
-						<input type="text" name="comment-input" id="comment-input" required placeholder="Type you comment here!">
+						<textarea rows="4" cols="50" name="comment-input" id="comment-input" required placeholder="Type you comment here!"></textarea>
 					</div>
-					<button id="submit-btn" type="submit" name="submit-comment" value="add-comment">Submit you comment</button>
+					<button id="submit-btn" type="submit" name="submit-comment" value="add-comment">Submit</button>
 				</form>
 			</div>
 			<div id="all-coments">
 				{% if comments %}	
-					<h2>Some comments!</h2>
-					<p>{{ comments }}</p>
+					{% for comment in comments %}
+						<div class="comment">
+							<div class="comment-header">
+								<h3>{{ comment.author }} at {{ comment.publish_date }}</h3>
+							</div>
+							<div class="comment-content">
+								<p>{{ comment.content }}</p>
+							</div>
+						</div>
+					{% endfor %}
 				{% else %}
 					<h2>No comments yet!</h2>
 				{% endif %}

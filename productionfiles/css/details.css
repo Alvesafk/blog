@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
-
-#post-container {
+#post-container, #comment-section {
 	display: flex;
 	flex-direction: column;
 	max-width: 1200px;
@@ -15,7 +13,6 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	border-bottom: 1px solid var(--fg-color);
 	margin-bottom: .75rem;
 }
 
@@ -76,4 +73,66 @@ pre code {
 	background-color: var(--fg-subtle);
 	padding: 3px;
 	border-radius: 4px;
+}
+
+.row-line {
+	border-bottom: 1px solid var(--fg-color);
+}
+
+#comment-section {
+	font-family: var(--normal-font);
+}
+
+textarea {
+	resize: none;
+}
+
+#comment-form {
+	margin-bottom: 1rem;
+}
+
+#comment-input {
+	font-family: var(--normal-font);
+	background-color: var(--bg-color-2);
+	border: 0;
+	border-radius: 8px;
+	height: 4rem;
+	width: 1192px;
+	padding: .5rem 0 0 .5rem;
+	margin: .75rem 0;
+	color: var(--fg-text);
+}
+
+#submit-btn {
+	font-family: var(--normal-font);
+	font-weight: bold;
+	font-size: 1rem;
+	text-decoration: underline;
+	border: 0;
+	border-radius: 8px;
+	background-color: var(--btn-bg);
+	color: var(--btn-fg);
+	padding: .5rem;
+}
+
+#submit-btn:hover {
+	background-color: var(--btn-hover);
+}
+
+.comment {
+	margin-bottom: 1rem;
+}
+
+.comment-header {
+	margin-bottom: .25rem;
+}
+
+.comment-header > h3 {
+	font-size: 1.25rem;
+	text-decoration: underline;
+}
+
+.comment-content > p {
+	font-size: 1rem;
+	text-indent: 1rem;
 }
