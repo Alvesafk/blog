@@ -147,3 +147,89 @@ footer {
 	font-weight: bold;
 	font-size: 1.25rem;
 }
+
+@media screen and (max-width: 985px) {
+	main {
+		font-size: 1rem;
+	}
+
+	h1 {
+		margin-top: 12px;
+		font-size: 2.25rem;
+	}
+
+	nav {
+		gap: .05rem;
+	}
+
+	#footer-content > div {
+		width: 150px;
+	}
+
+	#footer-content span, #footer-content p {
+		font-size: 1rem;
+	}
+}
+
+@media screen and (max-width: 666px) {
+	#header-content {
+		margin: 2rem 6rem;
+	}
+
+	h1 {
+		font-size: 1.80rem;
+		margin-top: 12px;
+	}
+
+	nav, .dropdown > span {
+		font-size: .75rem;
+	}
+
+	#footer-content > div {
+		margin: 1rem 6rem;
+	}
+
+	#footer-content span, #footer-content p {
+		font-size: 1rem;
+	}
+}
+
+@media screen and (max-width: 599px) {
+	#header-content {
+		margin: 1rem 4rem;
+	}
+
+	h1 {
+		font-size: 1.25rem;
+	}
+
+	nav {
+		margin-bottom: 12px;
+	}
+
+	#footer-content > div {
+		margin: 1rem 4rem;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	h1 {
+		font-size: 1rem;
+	}
+
+	nav, .dropdown > span {
+		font-size: .55rem;
+	}
+
+	.dropdown {
+		margin-bottom: 4px;
+	}
+
+	#footer-content > div {
+		max-width: 150px;
+	}
+
+	#footer-content span, #footer-content p {
+		font-size: .85rem;
+	}
+}

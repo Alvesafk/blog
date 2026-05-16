@@ -64,6 +64,18 @@ pre code {
 	line-height: 1.5;
 }
 
+a {
+	font-family: var(--normal-font);
+	transition: ease-in 0.2s;
+	color: var(--fg-link); 
+	text-decoration: underline;
+	font-weight: normal;
+}
+
+a:hover {
+	color: var(--fg-hover);
+}
+
 #post-footer > p {
 	margin: .5rem 0;
 }
