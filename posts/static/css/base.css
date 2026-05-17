@@ -50,6 +50,7 @@ a {
 	margin-right: 1rem;
 	color: var(--fg-color);
 	font-family: var(--normal-font);
+	font-weight: bold;
 }
 
 #about-link:hover, #posts-link:hover, #theme-icon:hover > * {
